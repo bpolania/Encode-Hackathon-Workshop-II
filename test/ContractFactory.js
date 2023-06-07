@@ -12,8 +12,8 @@ describe("ContractFactory", function() {
     [owner] = await ethers.getSigners();
     
     const SimpleContract = await ethers.getContractFactory("SimpleContract");
-    simpleContract = await SimpleContract.deploy();
-    await simpleContract.deployed();
+    // simpleContract = await SimpleContract.deploy();
+    // await simpleContract.deployed();
 
     const ContractFactory = await ethers.getContractFactory("ContractFactory");
     contractFactory = await ContractFactory.deploy();

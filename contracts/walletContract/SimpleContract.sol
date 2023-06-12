@@ -8,9 +8,9 @@ contract SimpleContract is AccessControl {
     bytes32 public constant USER_ROLE = keccak256("USER_ROLE");
     uint256[] public blockList;
 
-    function initialize(uint256 _value, address userAddress) public {
+    function initialize(uint256 _value) public {
         value = _value;
-        _setupRole(USER_ROLE, userAddress);
+        _setupRole(USER_ROLE, msg.sender);
     }
 
     function update() public {
